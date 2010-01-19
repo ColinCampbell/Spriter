@@ -187,7 +187,7 @@ def process_set(set_name, set_path, output_set_path, url_form):
 		# Create some CSS
 		css += cssString.format(
 			setName=set_name,
-			className=sprite["name"], 
+			className=sprite["name"].replace("|", ":"), 
 			width=sprite['width'],
 			height=sprite['height'],
 			x=sprite['x'], 
