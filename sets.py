@@ -208,7 +208,7 @@ def process_set(set_name, set_path, output_set_path, url_form):
 	for image in plain:
 		css += cssString.format(
 			setName=set_name,
-			className=image["name"],
+			className=image["name"].replace("|", ":"),
 			width=image["width"],
 			height=image["height"],
 			url=image["url"]
@@ -223,26 +223,4 @@ def process_set(set_name, set_path, output_set_path, url_form):
 		"plain": len(plain),
 		"sprited": len(sprites)
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
